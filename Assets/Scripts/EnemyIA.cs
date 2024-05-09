@@ -15,6 +15,8 @@ public class EnemyIA : MonoBehaviour
     private int currentPatrolPoint = 0; // Índice do ponto de patrulha atual
     private bool isChasing = false;     // Indica se o inimigo está perseguindo o jogador
 
+   int vida = 1;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -75,6 +77,19 @@ public class EnemyIA : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("sword") )
+        {
+            vida--;
+            if (vida <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
 }
 
 

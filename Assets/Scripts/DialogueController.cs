@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
+    public GameObject gerador;
     // Variável para controlar se o jogador está dentro do alcance da placa
     public int jogadorPerto = 0;
     // Variavel aparecer o botão para interagir
@@ -26,6 +27,7 @@ public class DialogueController : MonoBehaviour
         //se clicar E vai abrir o dialogo
         teclaDeInteracao = KeyCode.E;
         botaoAparecer.SetActive(false);
+        gerador.SetActive(false);
     }
 
     public void AceionarODialogo()
@@ -50,6 +52,8 @@ public class DialogueController : MonoBehaviour
     // Este método é chamado quando o jogador entra no collider da placa
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        //destivar o gerador
+        gerador.SetActive(false);
         //JogadorPerto True
         jogadorPerto = 1;
         botaoAparecer.SetActive(true);
@@ -58,6 +62,8 @@ public class DialogueController : MonoBehaviour
     // Este método é chamado quando o jogador sai do collider da placa
     public void OnTriggerExit2D(Collider2D collision)
     {
+        //ativar o gerador
+        gerador.SetActive(true);
         //JogadorPerto False
         jogadorPerto = 0;
         botaoAparecer.SetActive(false);

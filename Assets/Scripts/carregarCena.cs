@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class o : MonoBehaviour
+public class carregarCena : MonoBehaviour
 {
+
+    public GameObject carregar;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,10 @@ public class o : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        carregar.SetActive(true);
+    }
+
 }

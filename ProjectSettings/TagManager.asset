@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dica
+  - sword
+  - enemy
   layers:
   - Default
   - TransparentFX
