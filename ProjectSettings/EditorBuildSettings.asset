@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Towefight.unity
     guid: c65ad138bf0e25644b6ef48f41171071
+  - enabled: 1
+    path: Assets/Scenes/BossFighter.unity
+    guid: 180aaddef0472e34c82e1fb5038cc1b8
   m_configObjects: {}

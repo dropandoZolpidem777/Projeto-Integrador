@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
+    public GameObject botaoDeIcone;
     // Vari?vel para controlar se o jogador est? dentro do alcance da placa
     public int jogadorPerto = 0;
 
@@ -26,6 +27,7 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
+        botaoDeIcone.SetActive(false);
         //se clicar E vai abrir o dialogo
         teclaDeInteracao = KeyCode.Z;
     }

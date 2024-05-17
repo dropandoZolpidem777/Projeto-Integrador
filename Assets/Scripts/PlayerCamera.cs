@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
+ 
 
-    public Vector2 camera;
-    public Vector2 player;
+    public Transform player;
+    // Referência ao transform do jogador
+    float suavidadeMovimento = 10f;
 
-    float direcaoXPlayer;
-    float direcaoYPlayer;
+    // Velocidade suave de movimento da câmera
 
-    float direcaoXCamera;
-    float direcaoYCamera;
+    public Vector3 deslocamento;
+    // Deslocamento da câmera em relação ao jogador
 
-    void Start()
-    {
-        player = transform.position;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
-        player = new Vector2(direcaoXPlayer, direcaoYPlayer);
-        camera = new Vector2(direcaoXCamera, direcaoYCamera);
-
-        if (player == player)
-        {
-            camera = player;
-        }
+        Vector3 posicaoDesejada = player.position + deslocamento;
+        Vector3 posicaoSuavizada = Vector3.Lerp(transform.position, posicaoDesejada, suavidadeMovimento);
+        transform.position = new Vector3(posicaoSuavizada.x, posicaoSuavizada.y, transform.position.z); // Mantém a câmera na mesma profundidade (z) em relação ao mundo
     }
+    
 }
