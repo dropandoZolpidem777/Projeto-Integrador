@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 51784964}
   - component: {fileID: 51784958}
   - component: {fileID: 51784965}
-  - component: {fileID: 51784963}
+  - component: {fileID: 51784966}
   m_Layer: 0
   m_Name: Protagonista
   m_TagString: Player
@@ -566,18 +566,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &51784963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51784957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b0a31e229227e4f89f5eea688bc4da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &51784964
 Animator:
   serializedVersion: 5
@@ -618,6 +606,18 @@ MonoBehaviour:
   terceiro: {fileID: 21300000, guid: 5f1b9ae315e602b45a71b6e6e3095e14, type: 3}
   quarto: {fileID: 21300000, guid: eab0a5f58cf99e24fb37ff610535cca1, type: 3}
   quinto: {fileID: 21300000, guid: 924c443129368284a841acd4c5ee53ce, type: 3}
+--- !u!114 &51784966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51784957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4962e24895845ea499824965210e995e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &95729467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51784963}
+      - m_Target: {fileID: 51784966}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
         m_MethodName: Attack
         m_Mode: 1
@@ -1256,6 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adb33d130322d349a9aee891e4fd798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botaoDeIcone: {fileID: 0}
   jogadorPerto: 0
   teclaDeInteracao: 101
   dialogueObj: {fileID: 1684941679}
