@@ -19,6 +19,12 @@ public class DialogueController : MonoBehaviour
     //outro script
     private Dialogue dc;
 
+
+    private void Update()
+    {
+
+    }
+
     private void Start()
     {
         //chamando outro script pelo nome
@@ -32,6 +38,7 @@ public class DialogueController : MonoBehaviour
     {
         if (jogadorPerto == 1)
         {
+
             // Exibir o diálogo
             dc.Speech(profile, speechTxt, actorName);
         }

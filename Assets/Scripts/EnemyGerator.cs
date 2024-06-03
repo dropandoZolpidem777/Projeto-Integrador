@@ -5,15 +5,21 @@ using UnityEngine;
 public class EnemyGerator : MonoBehaviour
 {
     public GameObject enemyPrefab;      // Prefab do inimigo a ser gerado
-    public float spawnInterval = 2f;    // Intervalo de tempo entre os spawns
-    public float spawnRadius = 5f;      // Raio de spawn ao redor do gerador
-    public float spawnDuration = 60f;   // Duração de spawn em segundos (1 minuto)
+    public float spawnInterval;    // Intervalo de tempo entre os spawns
+    public float spawnRadius;      // Raio de spawn ao redor do gerador
+    public float spawnDuration;   // Duração de spawn em segundos (1 minuto)
 
+    public static GameObject completoMissao;
+    
     private float spawnTimer = 0f;
     private float spawnTimeElapsed = 0f;
 
     void Update()
     {
+        if (spawnDuration <= 0)
+        {
+            completoMissao.SetActive(true);
+        }
         if (spawnTimeElapsed < spawnDuration)
         {
             spawnTimer += Time.deltaTime;
@@ -27,6 +33,8 @@ public class EnemyGerator : MonoBehaviour
             spawnTimeElapsed += Time.deltaTime;
         }
     }
+
+   
 
     void SpawnEnemy()
     {
