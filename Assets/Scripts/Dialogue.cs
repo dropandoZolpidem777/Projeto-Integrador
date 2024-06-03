@@ -27,7 +27,7 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
-        botaoDeIcone.SetActive(false);
+        //botaoDeIcone.SetActive(false);
         //se clicar E vai abrir o dialogo
         teclaDeInteracao = KeyCode.Z;
     }
