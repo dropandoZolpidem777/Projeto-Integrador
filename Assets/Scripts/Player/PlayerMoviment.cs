@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour
 {
     // Detectar o JoyStick
-    public FixedJoystick moveJoystick;
+    public VariableJoystick moveJoystick;
     // velocidade que o personagem vai andar
     public float velocidadeAndar = 5f;
 
@@ -27,12 +26,16 @@ public class PlayerMoviment : MonoBehaviour
 
     void Movimentacao()
     {
+
         float horizontal = moveJoystick.Horizontal;
         float vertical = moveJoystick.Vertical;
 
         Vector2 movimentacao = new Vector2(horizontal, vertical);
-
+       
         // Movimentar o jogador usando o Rigidbody2D
         rb.velocity = movimentacao * velocidadeAndar;
+
+
+
     }
 }

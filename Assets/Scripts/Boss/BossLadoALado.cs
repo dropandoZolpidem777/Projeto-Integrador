@@ -37,7 +37,6 @@ public class BossLadoALado : MonoBehaviour
         else
         {
             movimento = Vector3.MoveTowards(transform.position, esquerda.position, velocidade * Time.deltaTime);
-            Debug.Log(Vector3.Distance(transform.position, esquerda.position));
             if (Vector3.Distance(transform.position, esquerda.position) < 0.1f)
             {
                 indoParaDireita = true;

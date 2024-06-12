@@ -5,7 +5,7 @@ using UnityEngine.Video;
 
 public class AtaqueSeguePlayer : MonoBehaviour
 {
-    public float velocidade = 2f;
+    public float velocidade = 5f;
     public Vector3 posicaoAntigaPlayer;
     Transform player;
 
@@ -33,8 +33,9 @@ public class AtaqueSeguePlayer : MonoBehaviour
     {
         if (c.CompareTag("Player"))
         {
-            VidaPlayer.vida--;
+            c.GetComponent<VidaPlayer>().MortePlayer();
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }

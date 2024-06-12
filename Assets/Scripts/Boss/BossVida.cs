@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class BossVida : MonoBehaviour
 {
-    int bossVida = 10;
+    int vidaMaximaDoBoss = 10;
+    public static int vidaAtualDoBoss;
+
+    private void Update()
+    {
+        vidaAtualDoBoss = vidaMaximaDoBoss;
+    }
+
 
     void MorteBoss()
     {
-        bossVida--;
-        if (bossVida <= 0)
+        vidaAtualDoBoss--;
+        if (vidaAtualDoBoss <= 0)
         {
             Destroy(gameObject);
         }
