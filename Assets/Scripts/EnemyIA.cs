@@ -80,15 +80,31 @@ public class EnemyIA : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("sword") )
+     
+        if( collision.CompareTag("sword"))
         {
-            vida--;
-            if (vida <= 0)
-            {
-                Destroy(gameObject);
-            }
+            Debug.Log("Relou na espada@@@@@@@@@@@@");
+            Destroy(gameObject);
+            return;
         }
+            
+
+        if( collision.CompareTag("Player"))
+        {
+
+            if (collision.GetComponent<TrocarDeImagemDaVida>().podeApanhar == false)
+                return;
+            collision.GetComponent<TrocarDeImagemDaVida>().podeApanhar = false;
+
+                Debug.Log("Relou no player");
+            collision.GetComponent<TrocarDeImagemDaVida>().vida--;
+            if (collision.GetComponent<TrocarDeImagemDaVida>().vida <= 0)
+                Destroy(collision.gameObject);
+
+        }
+
     }
+    
 
 }
 

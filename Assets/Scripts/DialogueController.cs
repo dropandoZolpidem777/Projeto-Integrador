@@ -19,6 +19,9 @@ public class DialogueController : MonoBehaviour
     //outro script
     private Dialogue dc;
 
+    public bool iniciaLutaTowerFight = false;
+    public GameObject geradorInimigo;
+
 
     private void Update()
     {
@@ -68,5 +71,12 @@ public class DialogueController : MonoBehaviour
         //JogadorPerto False
         jogadorPerto = 0;
         botaoAparecer.SetActive(false);
+
+        if(iniciaLutaTowerFight == true)
+        {
+            Debug.Log("Começou a luta!");
+            geradorInimigo.SetActive(true);
+        }
+
     }
 }

@@ -59,6 +59,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.Log("atacou");
             player.Find("espada").GetComponent<SpriteRenderer>().enabled = true;
+            player.Find("espada").GetComponent<BoxCollider2D>().enabled = true;
             animator.SetTrigger("Ataque");
             //FimEspadada();
         }
@@ -67,6 +68,7 @@ public class PlayerAttack : MonoBehaviour
     public void FimEspadada()
     {
         player.Find("espada").GetComponent<SpriteRenderer>().enabled = false;
+        player.Find("espada").GetComponent<BoxCollider2D>().enabled = false;
     }
 
 }
