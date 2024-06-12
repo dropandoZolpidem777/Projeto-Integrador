@@ -8,7 +8,7 @@ public class VidaPlayer : MonoBehaviour
     public static int vida = 5;
     public int vidaAtual;
 
-    public Image imagemDaCidade;
+    public Image imagemDaVida;
     string CaminhoParaTrocarAVida = "";
 
 
@@ -42,25 +42,25 @@ public class VidaPlayer : MonoBehaviour
         {
             CaminhoParaTrocarAVida = "Sprites/vida/barravidadividida_02";
             Sprite sprite = Resources.Load<Sprite>(CaminhoParaTrocarAVida);
-            imagemDaCidade.sprite = sprite;
+            imagemDaVida.sprite = sprite;
         }
         if (vidaAtual == 3)
         {
             CaminhoParaTrocarAVida = "Sprites/vida/barravidadividida_03";
             Sprite sprite = Resources.Load<Sprite>(CaminhoParaTrocarAVida);
-            imagemDaCidade.sprite = sprite;
+            imagemDaVida.sprite = sprite;
         }
         if (vidaAtual == 2)
         {
             CaminhoParaTrocarAVida = "Sprites/vida/barravidadividida_04";
             Sprite sprite = Resources.Load<Sprite>(CaminhoParaTrocarAVida);
-            imagemDaCidade.sprite = sprite;
+            imagemDaVida.sprite = sprite;
         }
         if (vidaAtual == 1)
         {
             CaminhoParaTrocarAVida = "Sprites/vida/barravidadividida_05";
             Sprite sprite = Resources.Load<Sprite>(CaminhoParaTrocarAVida);
-            imagemDaCidade.sprite = sprite;
+            imagemDaVida.sprite = sprite;
         }
     }
 }

@@ -6,46 +6,55 @@ public class PlayerDefesa : MonoBehaviour
 {
     public int hits;
     public Transform prefabEscudo;
-    public float tempoDeDestruicaoDoEscudo = 1f;
+    public float tempoDeDestruicaoDoEscudo = 4f;
     public float tempoDeVoltarAAtivarOEscudo = 8f;
     public Transform escudo;
-    int escudoAtivo = 0;
+    public int escudoAtivo = 0;
+    public int inicarContagem = 0;
+     GameObject p;
 
     private void Start()
     {
-        
+        p = GameObject.Find("Player");
     }
 
     private void Update()
     {
-        if (escudoAtivo == 1) 
+        if (inicarContagem == 1)
         {
             tempoDeDestruicaoDoEscudo -= Time.deltaTime;
+        }
+        if (escudoAtivo == 1) 
+        {
             if (tempoDeDestruicaoDoEscudo <= 0)
             {
                 DestruirEscudo();
             }
+            
         }
         if(hits <= 0)
         {
             DestruirEscudo();
-            GetComponent<CapsuleCollider2D>().enabled = true;
+            p.GetComponent<BoxCollider2D>().enabled = true;
             Destroy(escudo.gameObject);
         }
     }
 
     public void AtivarEscudo()
     {
+        inicarContagem = 1;
         escudoAtivo = 1;
-        GetComponent<CapsuleCollider2D>().enabled = false;
+        p.GetComponent<BoxCollider2D>().enabled = false;
         escudo = Instantiate(prefabEscudo, transform.position, transform.rotation);
+        escudo.transform.parent = p.transform;
         hits = UnityEngine.Random.Range(2, 4);
     }
 
     void DestruirEscudo()
     {
+        inicarContagem = 0;
         escudoAtivo = 0;
-        GetComponent<CapsuleCollider2D>().enabled = true;
+        p.GetComponent<BoxCollider2D>().enabled = true;
         Destroy(escudo.gameObject);
     }
 

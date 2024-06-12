@@ -25,7 +25,7 @@ public class BossAtaqueSpawn : MonoBehaviour
         //vai gerar um valor random para spawnar os ataques
         tempoDeSpawn = UnityEngine.Random.Range(3, 5);
         //vai gerar um valor random para a bala ser distroida
-        tempoMorteBala = UnityEngine.Random.Range(6, 9);
+        tempoMorteBala = UnityEngine.Random.Range(7, 9);
 
         tempoAtualDoAtaque = tempoDeSpawn;
     }
