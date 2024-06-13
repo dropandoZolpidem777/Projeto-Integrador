@@ -26,7 +26,7 @@ public class PlayerDefesa : MonoBehaviour
         }
         if (escudoAtivo == 1) 
         {
-            if (tempoDeDestruicaoDoEscudo <= 0)
+            if (tempoDeDestruicaoDoEscudo <= 0) 
             {
                 DestruirEscudo();
             }
@@ -36,7 +36,10 @@ public class PlayerDefesa : MonoBehaviour
         {
             DestruirEscudo();
             p.GetComponent<BoxCollider2D>().enabled = true;
-            Destroy(escudo.gameObject);
+            if(hits <= 0)
+            {
+                Destroy(escudo.gameObject);
+            }
         }
     }
 
@@ -55,7 +58,10 @@ public class PlayerDefesa : MonoBehaviour
         inicarContagem = 0;
         escudoAtivo = 0;
         p.GetComponent<BoxCollider2D>().enabled = true;
-        Destroy(escudo.gameObject);
+        if (tempoDeDestruicaoDoEscudo <= 0)
+        {
+            Destroy(escudo.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D c)

@@ -8,7 +8,7 @@ public class BossVida : MonoBehaviour
     public Image lifebar;
     public Image redBar;
 
-    int vidaMaximaDoBoss = 10;
+    int vidaMaximaDoBoss = 1;
     public static int vidaAtualDoBoss;
 
     private void Update()
@@ -17,7 +17,7 @@ public class BossVida : MonoBehaviour
     }
 
 
-    void MorteBoss()
+    public void MorteBoss()
     {
 
         vidaAtualDoBoss--;
@@ -49,4 +49,13 @@ public class BossVida : MonoBehaviour
         redBar.transform.localScale = newScale;
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("sword"))
+        {
+            MorteBoss();
+        }
+    }
+
 }
