@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BossVida : MonoBehaviour
@@ -23,6 +24,7 @@ public class BossVida : MonoBehaviour
         vidaAtualDoBoss--;
         if (vidaAtualDoBoss <= 0)
         {
+            SceneManager.LoadScene("JogoCenaFinal");
             Destroy(gameObject);
         }
 
