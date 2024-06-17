@@ -11,9 +11,11 @@ public class PlayerAttack : MonoBehaviour
     private Vector3 position;
     private float width;
     private float height;
+    //BossVida bossVida;
 
     void Awake()
     {
+        //bossVida = GameObject.Find("Boss").GetComponent<BossVida>();
         width = (float)Screen.width / 2.0f;
         height = (float)Screen.height / 2.0f;
 
@@ -28,8 +30,6 @@ public class PlayerAttack : MonoBehaviour
         //Attack();
         player = GameObject.FindWithTag("Player").transform;
         animator = player.GetComponent<Animator>();
-
-       
     }
 
     // Update is called once per frame
@@ -55,6 +55,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void Attack()
     {
+        //bossVida.MorteBoss();
         if (Input.touchCount > 0)
         {
             Debug.Log("atacou");

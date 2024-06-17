@@ -24,7 +24,7 @@ public class BossEscudo : MonoBehaviour
 
     void Update()
     {
-        if (BossVida.vidaAtualDoBoss <= 5 && ativouEscudo == 0)
+        if (BossVida.vidaAtualDoBoss == 5 && ativouEscudo == 0)
         {
             AtivarEscudo();
             ativouEscudo = 1;
@@ -44,13 +44,14 @@ public class BossEscudo : MonoBehaviour
     public void AtivarEscudo()
     {
         GetComponent<CapsuleCollider2D>().enabled = false;
+        GetComponent<BossLadoALado>().enabled = false;
         escudoAtivo = Instantiate(prefabDoEscudo, transform.position, transform.rotation);
         hits = UnityEngine.Random.Range(3, 5);
     }
 
     void CotadorAleatorio()
     {
-        if(ativouEscudo == 1 && tempoDeDesativacaoAutomatica < 0)
+        if(tempoDeDesativacaoAutomatica <= 0)
         {
             tempoDeDesativacaoAutomatica = UnityEngine.Random.Range(10, 20);
         }
@@ -58,6 +59,7 @@ public class BossEscudo : MonoBehaviour
 
     public void QuebrarEscudo()
     {
+        GetComponent<BossLadoALado>().enabled = true;
         GetComponent<CapsuleCollider2D>().enabled = true;
         Destroy(escudoAtivo.gameObject);
     }

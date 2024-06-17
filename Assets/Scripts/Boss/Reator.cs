@@ -21,12 +21,13 @@ public class Reator : MonoBehaviour
         destruir = UnityEngine.Random.Range(1, 3);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D c)
     {
         contagem++;
-        if (collision.CompareTag("Player") && contagem == destruir)
+        if (c.CompareTag("Player") && contagem == destruir)
         {
-            escudoBoss.QuebrarEscudo();
+
+            c.GetComponent<BossEscudo>().QuebrarEscudo();
         }
     }
 }

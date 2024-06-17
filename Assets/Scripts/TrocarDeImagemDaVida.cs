@@ -80,6 +80,15 @@ public class TrocarDeImagemDaVida : MonoBehaviour
 
     }
 
+    public void MortePlayer()
+    {
+        vida--;
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    if (collision.CompareTag("enemy"))
