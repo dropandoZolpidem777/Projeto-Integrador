@@ -8,14 +8,13 @@ public class BossVida : MonoBehaviour
     public Image lifebar;
     public Image redBar;
 
-    int vidaMaximaDoBoss = 1;
+    int vidaMaximaDoBoss = 10;
     public static int vidaAtualDoBoss;
 
-    private void Update()
+    private void Start()
     {
         vidaAtualDoBoss = vidaMaximaDoBoss;
     }
-
 
     public void MorteBoss()
     {
@@ -38,7 +37,7 @@ public class BossVida : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Vector3 redBarScale = redBar.transform.localScale;
 
-        while (redBar.transform.localScale.x > newScale.x) 
+        while (redBar.transform.localScale.x > newScale.x)
         {
             redBarScale.x -= Time.deltaTime * 0.25f;
             redBar.transform.localScale = redBarScale;
@@ -47,7 +46,6 @@ public class BossVida : MonoBehaviour
         }
 
         redBar.transform.localScale = newScale;
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,5 +55,4 @@ public class BossVida : MonoBehaviour
             MorteBoss();
         }
     }
-
 }

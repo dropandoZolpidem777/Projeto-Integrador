@@ -5,7 +5,7 @@ using UnityEngine.Video;
 
 public class AtaqueSeguePlayer : MonoBehaviour
 {
-    public float velocidade = 15f;
+    public static float velocidade = 15f;
     public Vector3 posicaoAntigaPlayer;
     Transform player;
 
