@@ -72,5 +72,13 @@ public class PlayerAttack : MonoBehaviour
         player.Find("espada").GetComponent<BoxCollider2D>().enabled = false;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Reator"))
+        {
+            Reator.contagem++;
+        }
+    }
+
 }
 

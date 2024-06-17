@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 101557175}
   - component: {fileID: 101557174}
   - component: {fileID: 101557176}
+  - component: {fileID: 101557177}
   m_Layer: 0
   m_Name: TUBODEINSAIO (2)
-  m_TagString: Untagged
+  m_TagString: Reator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,6 +254,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.019516, y: 21.967405}
   m_EdgeRadius: 0
+--- !u!114 &101557177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101557173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb6918d9f9958645ab4118d71a1e382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &173162749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,9 +2079,10 @@ GameObject:
   - component: {fileID: 1002627805}
   - component: {fileID: 1002627804}
   - component: {fileID: 1002627806}
+  - component: {fileID: 1002627807}
   m_Layer: 0
   m_Name: TUBODEINSAIO (3)
-  m_TagString: Untagged
+  m_TagString: Reator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2172,7 +2186,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6459899, y: -3.3592086}
+  m_Offset: {x: -0.6459899, y: -6.605072}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2183,8 +2197,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.191308, y: 22.078423}
+  m_Size: {x: 13.191308, y: 28.570148}
   m_EdgeRadius: 0
+--- !u!114 &1002627807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002627803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb6918d9f9958645ab4118d71a1e382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1051684274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,9 +2965,10 @@ GameObject:
   - component: {fileID: 1565358848}
   - component: {fileID: 1565358847}
   - component: {fileID: 1565358849}
+  - component: {fileID: 1565358850}
   m_Layer: 0
   m_Name: TUBODEINSAIO (6)
-  m_TagString: Untagged
+  m_TagString: Reator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3058,6 +3085,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.845631, y: 23.1508}
   m_EdgeRadius: 0
+--- !u!114 &1565358850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565358846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb6918d9f9958645ab4118d71a1e382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1596861240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,9 +3252,10 @@ GameObject:
   - component: {fileID: 1732458051}
   - component: {fileID: 1732458050}
   - component: {fileID: 1732458052}
+  - component: {fileID: 1732458053}
   m_Layer: 0
   m_Name: TUBODEINSAIO (4)
-  m_TagString: Untagged
+  m_TagString: Reator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3332,6 +3372,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.336567, y: 25.377846}
   m_EdgeRadius: 0
+--- !u!114 &1732458053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732458049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb6918d9f9958645ab4118d71a1e382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741010169
 GameObject:
   m_ObjectHideFlags: 0

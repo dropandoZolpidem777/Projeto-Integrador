@@ -7,6 +7,11 @@ public class BossEscudo : MonoBehaviour
 {
     public int hits;
     public int ativouEscudo = 0;
+    public static BossEscudo instacia;
+    private void Awake()
+    {
+        instacia = this;
+    }
 
     public float tempoDeDesativacaoAutomatica = 0;
 
@@ -43,6 +48,7 @@ public class BossEscudo : MonoBehaviour
 
     public void AtivarEscudo()
     {
+        //AtaqueSeguePlayer.velocidade = 25f;
         GetComponent<CapsuleCollider2D>().enabled = false;
         GetComponent<BossLadoALado>().enabled = false;
         escudoAtivo = Instantiate(prefabDoEscudo, transform.position, transform.rotation);
@@ -59,6 +65,7 @@ public class BossEscudo : MonoBehaviour
 
     public void QuebrarEscudo()
     {
+        AtaqueSeguePlayer.velocidade = 15f;
         GetComponent<BossLadoALado>().enabled = true;
         GetComponent<CapsuleCollider2D>().enabled = true;
         Destroy(escudoAtivo.gameObject);
