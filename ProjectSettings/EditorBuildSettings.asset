@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JogoCenaFinal.unity
     guid: c2f73ebc29913f140bbd3bfa02a2a3a5
+  - enabled: 1
+    path: Assets/Scenes/CorredorAntesDoBoss.unity
+    guid: a9cdf61ed7aeafc4d8763ccfd547dc42
   m_configObjects: {}
