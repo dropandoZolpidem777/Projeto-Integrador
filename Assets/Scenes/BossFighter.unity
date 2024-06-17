@@ -1937,6 +1937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigante
       objectReference: {fileID: 0}
+    - target: {fileID: 1000000000000000, guid: 5c9ce6e0b92e4c8cbd35688f5598ee53, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1000000000000001, guid: 5c9ce6e0b92e4c8cbd35688f5598ee53, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
