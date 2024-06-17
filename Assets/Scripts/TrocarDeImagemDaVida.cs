@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;// Colocar imagem
 
 public class TrocarDeImagemDaVida : MonoBehaviour
@@ -71,6 +72,12 @@ public class TrocarDeImagemDaVida : MonoBehaviour
             
             vidaSprite.sprite = quinto;
         }
+
+        if(vida <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
     }
 
     public void TrocarAImagem()
