@@ -13,8 +13,19 @@ public class TrocarCena : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             ObjAparecer.SetActive(true);
-            SceneManager.LoadScene("Towefight");
         }
+    }
+    public void trocarDeParaBoss()
+    {
+        SceneManager.LoadScene("BossFighter");
+    }
+    public void trocarDeFimDOGAME()
+    {
+        SceneManager.LoadScene("JogoCenaFinal");
+    }
+    public void trocarDeTowerFighter()
+    {
+        SceneManager.LoadScene("Towefight");
     }
 
     private void OnTriggerExit2D(Collider2D other)
