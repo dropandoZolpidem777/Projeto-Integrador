@@ -19,6 +19,9 @@ public class DialogueController : MonoBehaviour
     //outro script
     private Dialogue dc;
 
+    public GameObject DesaparecerAtaque1;
+    public GameObject DesaparecerAtaque2;
+
     public bool iniciaLutaTowerFight = false;
     public GameObject geradorInimigo;
 
@@ -34,7 +37,6 @@ public class DialogueController : MonoBehaviour
         dc = GameObject.FindObjectOfType<Dialogue>();
         //se clicar E vai abrir o dialogo
         teclaDeInteracao = KeyCode.E;
-        botaoAparecer.SetActive(false);
     }
 
     public void AceionarODialogo()
@@ -60,6 +62,8 @@ public class DialogueController : MonoBehaviour
     // Este método é chamado quando o jogador entra no collider da placa
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        //DesaparecerAtaque1.SetActive(false);
+        DesaparecerAtaque2.SetActive(false);
         //JogadorPerto True
         jogadorPerto = 1;
         botaoAparecer.SetActive(true);
@@ -68,6 +72,8 @@ public class DialogueController : MonoBehaviour
     // Este método é chamado quando o jogador sai do collider da placa
     public void OnTriggerExit2D(Collider2D collision)
     {
+        //DesaparecerAtaque1.SetActive(true);
+        DesaparecerAtaque2.SetActive(true);
         //JogadorPerto False
         jogadorPerto = 0;
         botaoAparecer.SetActive(false);
